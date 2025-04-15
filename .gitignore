@@ -1,0 +1,30 @@
+# Ignore build artifacts
+build/
+bin/
+
+# Optional: ignore distribution packages (uncomment if built dynamically)
+# dist/
+
+# Compiled object files
+*.o
+*.obj
+
+# Executables (if built in root accidentally)
+cxx-xrd-crystallite-size-calculation
+*.exe
+*.out
+
+# Editor/IDE files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Make backup files
+*.bak
+*.tmp
