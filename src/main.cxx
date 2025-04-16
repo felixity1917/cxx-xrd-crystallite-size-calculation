@@ -16,7 +16,22 @@ std::vector<double> baselineCorrection(const std::vector<double>& x, const std::
 std::pair<std::vector<double>, std::vector<double>> detectPeaks(const std::vector<double>& x, const std::vector<double>& y);
 
 int main() {
-	
+	std::string filePath = "./CU_B_OBS.txt";
+	std::vector<double> [x, y] = readXrdData(filePath);
+	std::vector<double> yCorrected = baselineCorrection(x, y, 2);
+	std::vector<double> [peaks, ySmooth] = detectPeaks(x, yCorrected);
+
+	if (peaks.size() == 0) {
+		std::cout << "No peaks detected." << std::endl;
+		return 1;
+	}
+
+	std::vector<double> peakParams = fitPeaks(x, yCorrected, peaks);
+
+	/* Code to plot the graphs here */
+
+	for ()
+
 	return 0;
 }
 
